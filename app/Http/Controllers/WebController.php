@@ -12,6 +12,9 @@ class WebController extends Controller
     }
 
     public function voting() {
-        return Inertia::render('Voting');
+        $voting_state = env("VOTING_STATE");
+        return Inertia::render('Voting', [
+            'voting_state' => $voting_state
+        ]);
     }
 }

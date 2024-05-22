@@ -1,13 +1,20 @@
 import {Head} from "@inertiajs/react";
 import App from "@/Layouts/App.jsx";
+import VotingPending from "@/Components/VotingPending.jsx";
+import VotingFinished from "@/Components/VotingFinished.jsx";
+import LoginRequired from "@/Components/LoginRequired.jsx";
 
-const Voting = () => {
+const Voting = ({ auth, voting_state }) => {
     return (
         <>
             <Head title="Голосование"/>
-            <div className="voting">
-                <h1>Данная страница находится в разработке</h1>
-            </div>
+            { auth.user === null ? (<LoginRequired/>) : (
+                <div className="voting">
+                    {voting_state === "PENDING" ? (<VotingPending/>) : (voting_state === "FINISHED" ? (
+                        <VotingFinished/>) : (<></>))}
+                </div>
+            )}
+
         </>
     );
 }

@@ -8,10 +8,10 @@ const PageHeader = (props) => {
                     <div className="page-header-nav__logo">
                         <Link href={route('home')}>
                             <img src="/static/images/girl.png" alt="Russian Community Beatmapping Contest #5"/>
-                            <div>
+                            <h1>
                                 <span className="accent-text">Russian Community</span><br/>
                                 Beatmapping Contest #5
-                            </div>
+                            </h1>
                         </Link>
                     </div>
                     <div className="page-header-nav__profile">

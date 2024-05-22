@@ -14,7 +14,7 @@ const Home = () => {
                         <strong>Russian Community Beatmapping Contest</strong> - это конкурс среди русскоязычных
                         мапперов в osu!. В данном конкурсе могут участвовать любые мапперы, кто владеют русским языком,
                         флаг в игре совершенно не важен. Благодаря этому сайту, вы можете проголосовать за свою любимую
-                        карту участвующую в конкурсе в этом году. Больше деталей о Russian Community Beatmapping Contest
+                        карту участвующую в конкурсе в этом году. Узнать больше деталей о Russian Community Beatmapping Contest
                         вы можете <a href="https://osu.ppy.sh/community/forums/topics/1924417" target="_blank">здесь</a>.
                     </p>
                 </div>

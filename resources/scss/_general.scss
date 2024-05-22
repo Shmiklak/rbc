@@ -8,6 +8,7 @@ body {
     background: $bg_color;
     color: $text_color;
     font-family: 'Exo 2', sans-serif;
+    font-size: 24px;
 }
 
 a {
@@ -30,4 +31,14 @@ a {
     opacity: 0;
     visibility: hidden;
     transform: scale(0.9);
+}
+
+main {
+    min-height: 80vh;
+}
+
+@media (max-width: 991px) {
+    body {
+        font-size: 16px;
+    }
 }
