@@ -1,0 +1,16 @@
+.home {
+    &-banner {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    &-text {
+        font-size: 24px;
+
+        a {
+            color: $accent_color;
+            text-decoration: underline;
+        }
+    }
+}
