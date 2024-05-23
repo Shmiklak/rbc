@@ -6,6 +6,8 @@
     display: inline-block;
     padding: 15px 40px;
     line-height: 1;
+    border: 0;
+    cursor: pointer;
 
     &-primary {
         background: $accent_color;

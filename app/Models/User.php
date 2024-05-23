@@ -47,4 +47,9 @@ class User extends Authenticatable
     public function isRestricted() {
         return $this->restricted_access;
     }
+
+    public function votes(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Vote::class);
+    }
 }

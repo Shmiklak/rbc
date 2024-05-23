@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ElevatedController;
 use App\Http\Controllers\oAuth\OsuAuthController;
 use App\Http\Controllers\WebController;
 use Illuminate\Foundation\Application;
@@ -19,6 +20,11 @@ use Inertia\Inertia;
 
 Route::get('/', [WebController::class, 'index'])->name('home');
 Route::get('/voting', [WebController::class, 'voting'])->name('voting');
+Route::post('/voting', [WebController::class, 'votingPost'])->name('voting.post');
+
+Route::middleware('elevated_access')->group(function () {
+    Route::get('/elevated', [ElevatedController::class, 'index'])->name('elevated');
+});
 
 Route::get('osu_auth', [OsuAuthController::class, 'redirectToProvider'])->name('osu_login');
 Route::get('osu_login', [OsuAuthController::class, 'handleProviderCallback']);
