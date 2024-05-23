@@ -15,7 +15,7 @@ class WebController extends Controller
 
     public function voting() {
         $voting_state = env("VOTING_STATE");
-        if ($voting_state === "STARTED") {
+        if ($voting_state === "STARTED" && auth()->check()) {
             $beatmaps = Beatmap::all();
             $user_votes = Vote::where('user_id', auth()->user()->id)->pluck('beatmap_id')->toArray();
         } else {
